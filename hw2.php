@@ -14,7 +14,7 @@ while (is_int($x))  {
   else ($y < $x) {
     $q = $y;
     $y=$y+$z;
-    $z = $b;
+    $z = $q;
   }
 }
 ?>
