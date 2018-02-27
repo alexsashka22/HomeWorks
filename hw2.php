@@ -11,7 +11,7 @@ while (is_int($x))  {
   echo "Задуманное число входит в числовой ряд";
   break;
   }
-  else ($y < $x) {
+  else {
     $q = $y;
     $y=$y+$z;
     $z = $q;
