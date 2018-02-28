@@ -1,0 +1,37 @@
+<?php
+
+$continentsAnimals =  [
+  'Africa'=>['African elephant','Gorilla'],
+  'Antarctica'=>['Penguins','Blue whales'],
+  'Asia'=>['Camelus bactrianus','Tiger'],
+  'Australia'=>['Dingo','Koala'],
+  'Europe'=>['Lynx','Bear'],
+  'North America'=>['Mountain lion','Racoon'],
+  'South America'=>['Llama','Jaguar']
+];
+
+foreach ($continentsAnimals as $continentsName => $animals) {
+  foreach ($animals as $continentsName) {
+    echo <h2>$continentsName</h2> </br> $animals . ', 'PHP_EOL;
+    }
+};
+
+$doubleNamesAnimals = [];
+ foreach ($continentsAnimals as $continentsName => $animals) {
+   foreach ($animals as $animalName) {
+     if (strpos($animalName, ' ') !== false) { // Проверяем на наличие пробела между словами
+           $doubleNamesAnimals[] = $animalName;
+   }
+ }
+
+echo '<pre>';
+print_r($doubleNamesAnimals);
+
+
+foreach ($doubleNamesAnimals as $newAnimal) {
+    shuffle($newAnimal);
+}
+
+echo '<pre>';
+print_r($doubleNamesAnimals);
+?>
