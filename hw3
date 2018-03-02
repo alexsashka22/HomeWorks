@@ -5,33 +5,37 @@ $continentsAnimals =  [
   'Antarctica'=>['Penguins','Blue whales'],
   'Asia'=>['Camelus bactrianus','Tiger'],
   'Australia'=>['Dingo','Koala'],
-  'Europe'=>['Lynx','Bear'],
+  'Europe'=>['Lynx','Brown Bear'],
   'North America'=>['Mountain lion','Racoon'],
   'South America'=>['Lama','Jaguar']
 ];
 
-foreach ($continentsAnimals as $continentsName => $animals) {
-  foreach ($animals as $animal) {
-    echo "<h2>$continentsName</h2>" . $animal . ', ' . PHP_EOL;
-    }
-};
+// foreach ($continentsAnimals as $continentsName => $animals) {
+//   foreach ($animals as $animal) {
+//     echo "<h2>$continentsName</h2>" . $animal . ', ' . PHP_EOL;
+//     }
+// };
 
 $doubleNamesAnimals = [];
  foreach ($continentsAnimals as $continentsName => $animals) {
    foreach ($animals as $animal) {
-     if (strpos($animal, ' ') !== false) { // Проверяем на наличие пробела между словами
-           $doubleNamesAnimals[] = "<h2>$continentsName</h2>" . $animal;
-   }
- }
-}
-echo '<pre>';
-print_r($doubleNamesAnimals);
-
-
-foreach ($doubleNamesAnimals as $newAnimal) {
-    shuffle($newAnimal);
+     $Newanimal = explode(' ', $animal);
+     if (count($Newanimal) == 2) {
+          $doubleNamesAnimals[$continentsName] = "<h2>$continentsName</h2>" . $animal;
+     }
+  }
 }
 
-echo '<pre>';
-print_r($doubleNamesAnimals);
+// echo '<pre>';
+// print_r($doubleNamesAnimals);
+
+$firstWords = $secondWords = [];
+
+foreach($doubleNamesAnimals as $mixanimal)
+    list($firstWords[], $secondWords[]) = explode(' ', $mixanimal);
+
+shuffle($secondWords);
+
+foreach($secondWords as $key=>$secondWord)
+    echo "{$firstWords[$key]} {$secondWord}" . ', ' .PHP_EOL;
 ?>
