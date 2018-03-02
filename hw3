@@ -36,6 +36,6 @@ foreach($doubleNamesAnimals as $mixanimal)
 
 shuffle($secondWords);
 
-foreach($secondWords as $key=>$secondWord)
-    echo "{$firstWords[$key]} {$secondWord}" . ', ' .PHP_EOL;
+foreach($secondWords as $continentsName=>$secondWord)
+    echo "{$firstWords[$continentsName]} {$secondWord}" . ', ' .PHP_EOL;
 ?>
