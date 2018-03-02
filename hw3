@@ -7,23 +7,23 @@ $continentsAnimals =  [
   'Australia'=>['Dingo','Koala'],
   'Europe'=>['Lynx','Bear'],
   'North America'=>['Mountain lion','Racoon'],
-  'South America'=>['Llama','Jaguar']
+  'South America'=>['Lama','Jaguar']
 ];
 
 foreach ($continentsAnimals as $continentsName => $animals) {
-  foreach ($animals as $continentsName) {
-    echo <h2>$continentsName</h2> </br> $animals . ', 'PHP_EOL;
+  foreach ($animals as $animal) {
+    echo "<h2>$continentsName</h2>" . $animal . ', ' . PHP_EOL;
     }
 };
 
 $doubleNamesAnimals = [];
  foreach ($continentsAnimals as $continentsName => $animals) {
-   foreach ($animals as $animalName) {
-     if (strpos($animalName, ' ') !== false) { // Проверяем на наличие пробела между словами
-           $doubleNamesAnimals[] = $animalName;
+   foreach ($animals as $animal) {
+     if (strpos($animal, ' ') !== false) { // Проверяем на наличие пробела между словами
+           $doubleNamesAnimals[] = "<h2>$continentsName</h2>" . $animal;
    }
  }
-
+}
 echo '<pre>';
 print_r($doubleNamesAnimals);
 
