@@ -42,7 +42,7 @@ foreach($firstWords as $continent=>$firstWordsNew) {
 
 foreach ($doubleNamesAnimals as $key => $value) {
   echo "<p>";
-  echo "<h2>" . $key . "</h2>";
+  echo "<h2>$key</h2>";
   echo implode(", ", $value) . ', ';
 }
 ?>
